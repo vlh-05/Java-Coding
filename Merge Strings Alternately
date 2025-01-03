@@ -15,7 +15,7 @@ class Solution {
         if (word1.length() < word2.length()){
                 result+=(word2.substring(l));
             }
-        else if (word1.length() > word2.length()){
+        else {
                 result+=(word1.substring(l));
         }
         return result;
