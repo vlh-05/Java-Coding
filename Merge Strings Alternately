@@ -1,0 +1,26 @@
+// Merge Strings Alternatively
+
+class Solution {
+    public String mergeAlternately(String word1, String word2) {
+        int l =Math.min(word1.length(), word2.length());
+        String result ="";
+        
+        for(int i=0; i<l;i++)
+        {
+            
+                result += word1.charAt(i);
+                result += word2.charAt(i);
+        }
+            
+        if (word1.length() < word2.length()){
+                result+=(word2.substring(l));
+            }
+        else if (word1.length() > word2.length()){
+                result+=(word1.substring(l));
+        }
+        return result;
+
+
+
+    }
+}
