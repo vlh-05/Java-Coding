@@ -1,0 +1,27 @@
+// Reverse vowels of a string
+
+class Solution {
+    public String reverseVowels(String s) {
+        char[] str =s.toCharArray();
+        int i = 0, n= str.length-1;
+        while(i<n)
+        {
+            if("aeiouAEIOU".indexOf(str[i]) == -1 ){
+                i++;
+            }
+            else if ("aeiouAEIOU".indexOf(str[n]) == -1){
+                n--;
+            }
+            else{
+                char temp = str[i];
+                str[i] = str[n];
+                str[n] = temp;
+                i++;
+                n--;
+            }
+
+        }
+        return String.valueOf(str);
+    }
+    
+}
