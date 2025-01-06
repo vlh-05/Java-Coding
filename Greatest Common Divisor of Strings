@@ -1,0 +1,22 @@
+class Solution {
+    public String gcdOfStrings(String str1, String str2) {
+        
+        int g = gcd(str1.length(), str2.length());
+        String s = str1.substring(0,g);
+        if(str1.equals(s.repeat(str1.length()/g)) && str2.equals(s.repeat(str2.length()/g)))
+        {
+            return s;
+        }
+        else
+        return "";
+    }
+    public int gcd(int s1, int s2)
+    {
+        while(s2!=0){
+            int temp = s1 % s2;
+            s1 = s2;
+            s2 = temp;
+        }
+        return s1;
+    }
+}
